@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/cislo1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd= "true"
+        android:layout_alignParentTop="true"
+        android:hint="Zadajte prvé číslo."/>
+
+    <EditText
+        android:id="@+id/cislo2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd= "true"
+        android:layout_below="@id/cislo1"
+        android:hint="Zadajte druhé číslo."/>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cislo2"
+        android:id="@+id/radio">
+
+        <RadioButton
+            android:id="@+id/plus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sčítanie" />
+
+        <RadioButton
+            android:id="@+id/minus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Odčítanie" />
+
+        <RadioButton
+            android:id="@+id/krat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Násobenie" />
+
+        <RadioButton
+            android:id="@+id/deleno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Delenie" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vypočítaj"
+        android:layout_below="@id/radio"
+        android:layout_alignParentRight="true"
+        android:onClick="Vypocitaj"/>
+
+
+    />
+</RelativeLayout>
+
