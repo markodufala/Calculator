@@ -1,8 +1,12 @@
 package com.example.kalkulaka;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -86,5 +90,30 @@ public class MainActivity extends AppCompatActivity {
     private void vypisVysledok(Double result){
         String txt = String.valueOf(result);
         Toast.makeText(this, "Výsledok je:" + txt, Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.about:
+                Toast.makeText(this, "o aplikacii", Toast.LENGTH_LONG).show();
+                return true;
+            case R.id.faq:
+                Toast.makeText(this, "Kladené otázky", Toast.LENGTH_LONG).show();
+                return true;
+            case R.id.ukoncit:
+                this.finish();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+
+        }
     }
 }

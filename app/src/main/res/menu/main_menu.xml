@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/about" android:title="O nás" />
+    <item android:id="@+id/faq" android:title="F.A.Q" />
+    <item android:id="@+id/ukoncit" android:title="Ukončit" />
+
+</menu>
