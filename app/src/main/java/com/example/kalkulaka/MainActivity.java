@@ -1,18 +1,21 @@
 package com.example.kalkulaka;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 public class MainActivity extends AppCompatActivity {
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +24,18 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+    public  void Zamkni (View v) {
+        ImageButton calculator;
+
+        calculator = (ImageButton) findViewById(R.id.imageButton);
+        if (calculator.isPressed()){
+            Toast.makeText(this, "Zamkni", Toast.LENGTH_LONG).show();
+        }
+    }
     public void Vypocitaj(View v) {
+
+
 
         EditText et1, et2;
 
@@ -62,6 +76,8 @@ public class MainActivity extends AppCompatActivity {
         else {
              Toast.makeText(this, "Nebolo zvolené políčko.", Toast.LENGTH_LONG ).show();
         }
+
+
 
     }
 
@@ -117,3 +133,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 }
+
+
+
